@@ -1,0 +1,21 @@
+
+extends layout
+
+block content
+  h #{title}
+  div
+    table
+      thead
+        tr 
+          th Screen Size
+          th HDD Size
+          th RAM
+          th Price
+      tbody
+        each quote, i in quotes
+          tr
+          td= quote.screenSize
+          td= quote.hdd
+          td= quote.ram
+          td= quote.price 
+          tr

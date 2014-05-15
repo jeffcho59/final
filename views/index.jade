@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  form(method='POST', action='/addLaptop')
+    h1 Buying a Laptop
+      h4 Screen Size
+      input(type='radio', checked='', name='scrn', value='11')
+      | 11 Inches -included
+      br
+      input(type='radio', name='scrn', value='15')
+      | 15 Inches +$200
+      br
+      h4 Hard Drive Size
+      input(type='radio', checked='', name='hdd', value='128')
+      | 128 GB -included
+      br
+      input(type='radio', name='hdd', value='256')
+      | 256 GB +$200
+      br
+      h4 RAM Size
+      input(type='radio', checked='', name='ram', value='8')
+      | 8 GB -included
+      br
+      input(type='radio', name='ram', value='16')
+      | 16 GB +$200
+      br
+      br
+      input(type='submit', value='Buy laptop')
+  form(method='POST', action='/getQuotes')
+      br
+      input(type='submit', value='Get Quotes')
+  
